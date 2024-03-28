@@ -1,0 +1,65 @@
+{
+    "event": [],
+    "info": {
+        "_postman_id": "6e495129-a1d6-4cb6-ab49-8c71179a3823",
+        "name": "Sample Postman collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "",
+                            "pm.test('Sample test: Test for successful response', function() {",
+                            "  pm.expect(pm.response.code).to.equal(200);",
+                            "});",
+                            ""
+                        ],
+                        "id": "69060299-0355-4c19-b7e0-88667d252a15",
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "id": "8c74b1ff-837b-401a-8760-b50a070be995",
+            "name": "Sample request name",
+            "request": {
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"key1\":\"value1\",\"key2\":\"value2\",\"key3\":\"value3\"}"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": ""
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "cache-control",
+                        "value": "no-cache"
+                    }
+                ],
+                "method": "POST",
+                "url": {
+                    "host": [
+                        "httpbin",
+                        "org"
+                    ],
+                    "path": [
+                        "post"
+                    ],
+                    "protocol": "https",
+                    "query": [],
+                    "variable": []
+                }
+            },
+            "response": []
+        }
+    ],
+    "variable": []
+}

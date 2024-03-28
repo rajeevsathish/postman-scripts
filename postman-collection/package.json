@@ -1,0 +1,24 @@
+{
+  "name": "postman-collection",
+  "version": "1.0.0",
+  "description": "Postman collection creation or reading the collection using postman npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "coll-create": "node create/create-ps-collection.js",
+    "coll-read": "node read/read-ps-collection.js"
+  },
+  "keywords": [
+    "postman",
+    "collection"
+  ],
+  "author": "Vinu Kumar V S",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.1",
+    "fs": "^0.0.1-security",
+    "postman-collection": "^4.4.0"
+  }
+}

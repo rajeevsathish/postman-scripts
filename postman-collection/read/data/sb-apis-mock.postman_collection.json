@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "9da3c732-1c2a-4f6e-ada1-907ce748771c",
+		"name": "sb-apis-mock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4214340"
+	},
+	"item": [
+		{
+			"name": "Sample",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://a01fcfde-828f-4ee6-a9a4-d81ab3ae6c9d.mock.pstmn.io/sample",
+					"protocol": "https",
+					"host": [
+						"a01fcfde-828f-4ee6-a9a4-d81ab3ae6c9d",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"sample"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://a01fcfde-828f-4ee6-a9a4-d81ab3ae6c9d.mock.pstmn.io/sample",
+							"protocol": "https",
+							"host": [
+								"a01fcfde-828f-4ee6-a9a4-d81ab3ae6c9d",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"sample"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 02 Nov 2023 10:31:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "439"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b7-v2XGTX35cNN5GgglcavY4bGeHxE\""
+						},
+						{
+							"key": "set-cookie",
+							"value": "sails.sid=s%3AAIvf5hYxdK_12vqvXje4_vAmqPJZeqzZ.jGnhH%2FGmViQdX9h9kHJTyu4S3SorL1O%2BGUH3fHJG7MA; Path=/; HttpOnly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"args\": {\n        \"test\": \"123\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-65437a78-6a72cb977e0e7e871bd2a710\",\n        \"user-agent\": \"PostmanRuntime/7.33.0\",\n        \"accept\": \"*/*\",\n        \"postman-token\": \"66631fd1-7aeb-48af-986d-2d6d782036f5\",\n        \"accept-encoding\": \"gzip, deflate, br\"\n    },\n    \"url\": \"https://postman-echo.com/get?test=123\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Channel - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/channel/v1/read/0135261634806579203",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"channel",
+								"v1",
+								"read",
+								"0135261634806579203"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 02 Nov 2023 10:36:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-RateLimit-Limit-hour",
+							"value": "30000"
+						},
+						{
+							"key": "X-RateLimit-Remaining-hour",
+							"value": "29998"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "GET,PUT,POST,PATCH,DELETE,OPTIONS"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "Content-Type, Authorization,cid, user-id, x-auth, Cache-Control, X-Requested-With, *"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"1251-2W05+njVYwmrIgT+eLDCq4ywWmE\""
+						},
+						{
+							"key": "x-envoy-upstream-service-time",
+							"value": "29"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "32"
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "4"
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.14.1"
+						},
+						{
+							"key": "X-Proxy-Cache",
+							"value": "HIT"
+						},
+						{
+							"key": "X-Proxy-Cache-Date",
+							"value": "Thu, 02 Nov 2023 10:33:23 GMT"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"api.channel.read\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2023-11-02T10:33:23.321Z\",\n    \"params\": {\n        \"resmsgid\": \"3fc21690-796b-11ee-aa52-8d96a90bc246\",\n        \"msgid\": \"8f37305d-3a21-4494-86ce-04af5b7f2eb3\",\n        \"status\": \"successful\",\n        \"err\": null,\n        \"errmsg\": null\n    },\n    \"responseCode\": \"OK\",\n    \"result\": {\n        \"channel\": {\n            \"identifier\": \"0135261634806579203\",\n            \"lastStatusChangedOn\": \"2023-06-06T06:52:28.791+0000\",\n            \"code\": \"0135261634806579203\",\n            \"frameworks\": [\n                {\n                    \"name\": \"sunbird_TPD\",\n                    \"relation\": \"hasSequenceMember\",\n                    \"identifier\": \"sunbird_TPD\",\n                    \"description\": \"Sunbird TPD framework\",\n                    \"objectType\": \"Framework\",\n                    \"status\": \"Live\",\n                    \"type\": \"TPD\",\n                    \"index\": 1\n                },\n                {\n                    \"name\": \"sunbird\",\n                    \"relation\": \"hasSequenceMember\",\n                    \"identifier\": \"sunbird\",\n                    \"description\": \"Sunbird K-12 framework\",\n                    \"objectType\": \"Framework\",\n                    \"status\": \"Live\",\n                    \"type\": \"K-12\",\n                    \"index\": 2\n                }\n            ],\n            \"consumerId\": \"7411b6bd-89f3-40ec-98d1-229dc64ce77d\",\n            \"description\": \"Default Organisation for Sunbird\",\n            \"assetAdditionalCategories\": [],\n            \"autoCreateBatch\": \"Enabled\",\n            \"languageCode\": [],\n            \"createdOn\": \"2023-06-06T06:52:28.791+0000\",\n            \"objectType\": \"Channel\",\n            \"versionKey\": \"1696490575132\",\n            \"collectionPrimaryCategories\": [\n                \"Course\"\n            ],\n            \"contentPrimaryCategories\": [\n                \"Course Assessment\",\n                \"Explanation Content\"\n            ],\n            \"name\": \"sunbird\",\n            \"primaryCategories\": [\n                {\n                    \"identifier\": \"obj-cat:asset_asset_all\",\n                    \"name\": \"Asset\",\n                    \"targetObjectType\": \"Asset\"\n                },\n                {\n                    \"identifier\": \"obj-cat:certificate-template_asset_all\",\n                    \"name\": \"Certificate Template\",\n                    \"targetObjectType\": \"Asset\"\n                },\n                {\n                    \"identifier\": \"obj-cat:course_collection_all\",\n                    \"name\": \"Course\",\n                    \"targetObjectType\": \"Collection\"\n                },\n                {\n                    \"identifier\": \"obj-cat:course-unit_collection_all\",\n                    \"name\": \"Course Unit\",\n                    \"targetObjectType\": \"Collection\"\n                },\n                {\n                    \"identifier\": \"obj-cat:etextbook_content_all\",\n                    \"name\": \"eTextbook\",\n                    \"targetObjectType\": \"Content\"\n                },\n                {\n                    \"identifier\": \"obj-cat:explanation-content_content_all\",\n                    \"name\": \"Explanation Content\",\n                    \"targetObjectType\": \"Content\"\n                }\n            ],\n            \"additionalCategories\": [\n                \"Asset\",\n                \"Certificate Template\",\n                \"Content\",\n                \"Course\",\n                \"Course Assessment\",\n                \"Course Unit\",\n                \"Explanation Content\"\n            ],\n            \"lastUpdatedOn\": \"2023-10-05T07:22:55.132+0000\",\n            \"defaultCourseFramework\": \"sunbird_TPD\",\n            \"collectionAdditionalCategories\": [\n                \"Course\"\n            ],\n            \"assetPrimaryCategories\": [\n                \"Asset\",\n                \"CertAsset\",\n                \"Certificate Template\"\n            ],\n            \"status\": \"Live\",\n            \"defaultFramework\": \"sunbird\"\n        }\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://dev.sunbirded.org",
+			"type": "string"
+		}
+	]
+}
