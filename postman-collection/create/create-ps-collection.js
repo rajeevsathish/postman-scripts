@@ -1,105 +1,97 @@
-const { Collection, Item, Header } = require('postman-collection');
-const path = require('path');
 const fs = require('fs');
+const axios = require('axios');
 const dotenv = require('dotenv');
 dotenv.config();
 
 const HOST_URL = process.env.BASE_URL || "https://dev.sunbirded.org/";
-const API_AUTH_TOKEN = 'Bearer ' + process.env.AUTH_API_TOKEN;
+const API_AUTH_TOKEN = process.env.AUTH_API_TOKEN;
 
-const filePath = path.resolve(__dirname, '../read/data/sb-apis-mock.postman_collection.json');
-
-// Read the input JSON file
-fs.readFile(filePath, 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading file:', err);
-    return;
-  }
+const fetchData = async () => {
   try {
-    const collection = JSON.parse(data);
+    const response = await axios.post(`${HOST_URL}/api/data/v1/form/fetchAll`, {
+          request: {
+              root_org: "*",
+              framework: "*"
+          },
+          fields: [
+              "type",
+              "subtype",
+              "action",
+              "component",
+              "framework",
+              "data",
+              "root_org"
+          ]
+      }, {
+          headers: {
+              'Authorization': `Bearer ${API_AUTH_TOKEN}`,
+              'Content-Type': 'application/json'
+          }
+      });
 
-    // Extracting necessary information from the input collection
-    const readResponse = collection.item[0].response;
-    const formReq = JSON.parse(readResponse[0].body).result.form;
-    console.log('formReq ==>', formReq);
-    delete formReq.created_on;
-    delete formReq.last_modified_on;
-    const requestPayload = {
-       request: formReq
-    };
-    // Format the payload - todo
-    console.log('requestPayload ==>', requestPayload);
-    
-    // This string will be parsed to create header
-    const rawHeaderString = 'Authorization:' + API_AUTH_TOKEN +'\nContent-Type:application/json\n';
+      // console.log('responseData ==>',response.data.result.forms);
+      const responseData = response.data.result.forms;
 
-    // Parsing string to postman compatible format
-    const rawHeaders = Header.parse(rawHeaderString);
+      // Create an object to hold the collection
+      const postmanCollection = {
+      info: {
+        name: "Easy Install Form API Collection",
+        schema: "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+      },
+      item: [{
+        name: "Global*",
+        item: []
+      }]
+     };
 
-    // Generate headers
-    const requestHeader = rawHeaders.map((h) => new Header(h));
-
-    // API endpoint
-    const apiEndpoint = HOST_URL + '/api/data/v1/form/create';
-
-    // Name of the request
-    const requestName = 'Form Create';
-
-    // Add tests for request
-    const requestTests = `
-    pm.test('Sample test: Test for successful response', function() {
-    pm.expect(pm.response.code).to.equal(200);
-    });
-    `
-
-    // Create the final request
-    const postmanRequest = new Item({
-    name: `${requestName}`,
-    request: {
-        header: requestHeader,
-        url: apiEndpoint,
-        method: 'POST',
-        body: {
-        mode: 'raw',
-        raw: JSON.stringify(requestPayload),
+      // Add requests to the Postman collection
+      responseData.forEach((eachResponseData, index) => {
+      const requestData = {
+        request: {
+            type: eachResponseData.type,
+            subtype: eachResponseData.subtype,
+            action: eachResponseData.action,
+            component: eachResponseData.component,
+            framework: eachResponseData.framework,
+            data: JSON.parse(eachResponseData.data),
+            rootOrgId: eachResponseData.root_org
+        }
+      };
+      const item = {
+        name: `Form ${index + 1}`,
+        request: {
+            method: "POST",
+            url: "{{host}}/api/data/v1/form/create",
+            header: [{
+                    key: "Authorization",
+                    value: "Bearer {{api_key}}",
+                    description: ""
+                },
+                {
+                    key: "Content-Type",
+                    value: "application/json",
+                    description: ""
+                }
+            ],
+            body: {
+                mode: "raw",
+                raw: JSON.stringify(requestData, null, 4)
+            },
+            description: "Generated from Node.js script"
         },
-        auth: null,
-    },
-    event: [
-        {
-        listen: 'test',
-        script: {
-            type: 'text/javascript',
-            exec: requestTests,
-        },
-        },
-    ],
-    });
+        response: []
+      };
+      postmanCollection.item[0].item.push(item);
+      });
 
-    // This is the our postman collection
-    const postmanCollection = new Collection({
-        info: {
-        name: 'Easy Install Form Postman collection'
-        },
-        item: [],
-    });
+      // Write the Postman collection to a JSON file
+      const collectionJson = JSON.stringify(postmanCollection, null, 4);
+      fs.writeFileSync("collection.json", collectionJson);
 
-    // Add the reqest to our empty collection
-    postmanCollection.items.add(postmanRequest);
-
-    // Convert the collection to JSON 
-    // so that it can be exported to a file
-    const collectionJSON = postmanCollection.toJSON();
-
-    // Create a colleciton.json file. It can be imported to postman
-    fs.writeFile('./collection.json', JSON.stringify(collectionJSON), (err) => {
-    if (err) {
-        console.error('Error writing file:', err);
-        return;
-    }
-    console.log('Postman collection JSON file created successfully!');
-    });
+      console.log("collection.json created successfully!");
   } catch (error) {
-    console.error('Error parsing JSON:', error);
+      console.error('Error:', error.response ? error.response.data : error.message);
   }
-});
+};
+
+fetchData();
