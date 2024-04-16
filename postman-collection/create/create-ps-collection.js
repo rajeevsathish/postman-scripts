@@ -1,97 +1,59 @@
 const fs = require('fs');
-const axios = require('axios');
-const dotenv = require('dotenv');
-dotenv.config();
+const { fetchDataFromAPI } = require('./api');
+const { generatePostmanItems } = require('./postmanItems');
+const { globalPayload, channelSpecificPayload, NCFPayload } = require('./payloads');
 
-const HOST_URL = process.env.BASE_URL || "https://dev.sunbirded.org/";
-const API_AUTH_TOKEN = process.env.AUTH_API_TOKEN;
-
-const fetchData = async () => {
-  try {
-    const response = await axios.post(`${HOST_URL}/api/data/v1/form/fetchAll`, {
-          request: {
-              root_org: "*",
-              framework: "*"
-          },
-          fields: [
-              "type",
-              "subtype",
-              "action",
-              "component",
-              "framework",
-              "data",
-              "root_org"
-          ]
-      }, {
-          headers: {
-              'Authorization': `Bearer ${API_AUTH_TOKEN}`,
-              'Content-Type': 'application/json'
-          }
-      });
-
-      // console.log('responseData ==>',response.data.result.forms);
-      const responseData = response.data.result.forms;
-
-      // Create an object to hold the collection
-      const postmanCollection = {
-      info: {
-        name: "Easy Install Form API Collection",
-        schema: "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-      },
-      item: [{
-        name: "Global*",
-        item: []
-      }]
-     };
-
-      // Add requests to the Postman collection
-      responseData.forEach((eachResponseData, index) => {
-      const requestData = {
-        request: {
-            type: eachResponseData.type,
-            subtype: eachResponseData.subtype,
-            action: eachResponseData.action,
-            component: eachResponseData.component,
-            framework: eachResponseData.framework,
-            data: JSON.parse(eachResponseData.data),
-            rootOrgId: eachResponseData.root_org
-        }
-      };
-      const item = {
-        name: `Form ${index + 1}`,
-        request: {
-            method: "POST",
-            url: "{{host}}/api/data/v1/form/create",
-            header: [{
-                    key: "Authorization",
-                    value: "Bearer {{api_key}}",
-                    description: ""
+const generatePostmanCollection = async () => {
+    try {
+        const postmanCollection = {
+            info: {
+                name: "Easy Install Form API Collection",
+                schema: "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+            },
+            item: [
+                {
+                    name: "Global*",
+                    item: []
                 },
                 {
-                    key: "Content-Type",
-                    value: "application/json",
-                    description: ""
+                    name: "ChannelId",
+                    item: [
+                        {
+                            name: 'Framework-*',
+                            item: []
+                        },
+                        {
+                            name: 'Framework-NCF',
+                            item: []
+                        }
+                    ]
+                },
+                {
+                    name: "Duplicates",
+                    item: []
                 }
-            ],
-            body: {
-                mode: "raw",
-                raw: JSON.stringify(requestData, null, 4)
-            },
-            description: "Generated from Node.js script"
-        },
-        response: []
-      };
-      postmanCollection.item[0].item.push(item);
-      });
+            ]
+        };
 
-      // Write the Postman collection to a JSON file
-      const collectionJson = JSON.stringify(postmanCollection, null, 4);
-      fs.writeFileSync("collection.json", collectionJson);
+        const globalFormsData = await fetchDataFromAPI(globalPayload);
+        const globalFormsItems = generatePostmanItems(globalFormsData);
+        postmanCollection.item[0].item.push(...globalFormsItems);
 
-      console.log("collection.json created successfully!");
-  } catch (error) {
-      console.error('Error:', error.response ? error.response.data : error.message);
-  }
+        const channelFormResponseData = await fetchDataFromAPI(channelSpecificPayload);
+        const channelFormPostmanItems = generatePostmanItems(channelFormResponseData);
+        postmanCollection.item[1].item[0].item.push(...channelFormPostmanItems);
+
+        const NCFFormResponseData = await fetchDataFromAPI(NCFPayload);
+        const NCFFormPostmanItems = generatePostmanItems(NCFFormResponseData);
+        postmanCollection.item[1].item[1].item.push(...NCFFormPostmanItems);
+
+        const collectionJson = JSON.stringify(postmanCollection, null, 4);
+        fs.writeFileSync("collection.json", collectionJson);
+
+        console.log("collection.json created successfully!");
+    } catch (error) {
+        console.error('Error:', error.response ? error.response.data : error.message);
+    }
 };
 
-fetchData();
+generatePostmanCollection();
