@@ -1,79 +1,59 @@
-const { Collection, Item, Header } = require('postman-collection');
 const fs = require('fs');
+const { fetchDataFromAPI } = require('./api');
+const { generatePostmanItems } = require('./postmanItems');
+const { globalPayload, channelSpecificPayload, NCFPayload } = require('./payloads');
 
-// This is the our postman collection
-const postmanCollection = new Collection({
-  info: {
-    // Name of the collection
-    name: 'Sample Postman collection'
-  },
-  // Requests in this collection
-  item: [],
-});
+const generatePostmanCollection = async () => {
+    try {
+        const postmanCollection = {
+            info: {
+                name: "Easy Install Form API Collection",
+                schema: "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+            },
+            item: [
+                {
+                    name: "Global*",
+                    item: []
+                },
+                {
+                    name: channelSpecificPayload.request.root_org,
+                    item: [
+                        {
+                            name: 'Framework-*',
+                            item: []
+                        },
+                        {
+                            name: 'Framework-' + NCFPayload.request.framework,
+                            item: []
+                        }
+                    ]
+                },
+                {
+                    name: "Duplicates",
+                    item: []
+                }
+            ]
+        };
 
-// This string will be parsed to create header
-const rawHeaderString =
-  'Authorization:\nContent-Type:application/json\ncache-control:no-cache\n';
+        const globalFormsData = await fetchDataFromAPI(globalPayload);
+        const globalFormsItems = generatePostmanItems(globalFormsData);
+        postmanCollection.item[0].item.push(...globalFormsItems);
 
-// Parsing string to postman compatible format
-const rawHeaders = Header.parse(rawHeaderString);
+        const channelFormResponseData = await fetchDataFromAPI(channelSpecificPayload);
+        const channelFormPostmanItems = generatePostmanItems(channelFormResponseData);
+        postmanCollection.item[1].item[0].item.push(...channelFormPostmanItems);
 
-// Generate headers
-const requestHeader = rawHeaders.map((h) => new Header(h));
+        const NCFFormResponseData = await fetchDataFromAPI(NCFPayload);
+        const NCFFormPostmanItems = generatePostmanItems(NCFFormResponseData);
+        postmanCollection.item[1].item[1].item.push(...NCFFormPostmanItems);
 
-// API endpoint
-const apiEndpoint = 'https://httpbin.org/post';
+        const collectionJson = JSON.stringify(postmanCollection, null, 4);
+        fs.writeFileSync("collection.json", collectionJson);
 
-// Name of the request
-const requestName = 'Sample request name';
-
-// Request body
-const requestPayload = {
-  key1: 'value1',
-  key2: 'value2',
-  key3: 'value3'
+        console.log("collection.json created successfully!");
+    } catch (error) {
+        console.error('Error:', error.response ? error.response.data : error.message);
+    }
 };
 
-// Add tests for request
-const requestTests = `
-pm.test('Sample test: Test for successful response', function() {
-  pm.expect(pm.response.code).to.equal(200);
-});
-`
-
-// Create the final request
-const postmanRequest = new Item({
-  name: `${requestName}`,
-  request: {
-    header: requestHeader,
-    url: apiEndpoint,
-    method: 'POST',
-    body: {
-      mode: 'raw',
-      raw: JSON.stringify(requestPayload),
-    },
-    auth: null,
-  },
-  event: [
-    {
-      listen: 'test',
-      script: {
-        type: 'text/javascript',
-        exec: requestTests,
-      },
-    },
-  ],
-});
-
-// Add the reqest to our empty collection
-postmanCollection.items.add(postmanRequest);
-
-// Convert the collection to JSON 
-// so that it can be exported to a file
-const collectionJSON = postmanCollection.toJSON();
-
-// Create a colleciton.json file. It can be imported to postman
-fs.writeFile('./collection.json', JSON.stringify(collectionJSON), (err) => {
-  if (err) { console.log(err); }
-  console.log('File saved');
-});
+generatePostmanCollection();

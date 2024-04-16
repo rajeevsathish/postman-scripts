@@ -1,110 +1,263 @@
 {
 	"info": {
-		"_postman_id": "9da3c732-1c2a-4f6e-ada1-907ce748771c",
-		"name": "sb-apis-mock",
+		"_postman_id": "25813c43-8705-405b-a248-4cd7a1ecef8d",
+		"name": "Form-Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "4214340"
+		"_exporter_id": "7237779"
 	},
 	"item": [
 		{
-			"name": "Sample",
+			"name": "https://staging.sunbirded.org/api/data/v1/form/read",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-GB,en-US;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "connect.sid=s%3A1GXh9mFht_quQsnciMm3alyl3gWwR-d2.fACTw90UuLr%2BmQxXuuhzeGqyrWwog6%2FOFybmajoYmcI"
+					},
+					{
+						"key": "Origin",
+						"value": "https://staging.sunbirded.org"
+					},
+					{
+						"key": "Referer",
+						"value": "https://staging.sunbirded.org/workspace/content/create/textbook"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-App-Id",
+						"value": "staging.sunbird.portal"
+					},
+					{
+						"key": "X-App-Version",
+						"value": "7.0.0"
+					},
+					{
+						"key": "X-Channel-Id",
+						"value": "01269878797503692810"
+					},
+					{
+						"key": "X-Device-ID",
+						"value": "0b29ae08ac043b281c4bbee3b455ab63"
+					},
+					{
+						"key": "X-Org-code",
+						"value": "01269878797503692810"
+					},
+					{
+						"key": "X-Request-ID",
+						"value": "5b9d9698-933d-4873-8c93-69f0c8482cc7"
+					},
+					{
+						"key": "X-Session-ID",
+						"value": "1GXh9mFht_quQsnciMm3alyl3gWwR-d2"
+					},
+					{
+						"key": "X-Source",
+						"value": "web"
+					},
+					{
+						"key": "X-User-ID",
+						"value": "fca2925f-1eee-4654-9177-fece3fd6afc9"
+					},
+					{
+						"key": "X-msgid",
+						"value": "5b9d9698-933d-4873-8c93-69f0c8482cc7"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "ts",
+						"value": "2024-04-10T13:20:54+05:30"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"request\":{\"type\":\"content\",\"action\":\"create\",\"subType\":\"textbook\",\"rootOrgId\":\"01269878797503692810\",\"framework\":\"tn_k-12_5\"}}"
+				},
 				"url": {
-					"raw": "https://a01fcfde-828f-4ee6-a9a4-d81ab3ae6c9d.mock.pstmn.io/sample",
+					"raw": "https://staging.sunbirded.org/api/data/v1/form/read",
 					"protocol": "https",
 					"host": [
-						"a01fcfde-828f-4ee6-a9a4-d81ab3ae6c9d",
-						"mock",
-						"pstmn",
-						"io"
+						"staging",
+						"sunbirded",
+						"org"
 					],
 					"path": [
-						"sample"
+						"api",
+						"data",
+						"v1",
+						"form",
+						"read"
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "Default",
+					"name": "Form-Read-Response",
 					"originalRequest": {
-						"method": "GET",
-						"header": [],
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-GB,en-US;q=0.9,en;q=0.8"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"value": "connect.sid=s%3A1GXh9mFht_quQsnciMm3alyl3gWwR-d2.fACTw90UuLr%2BmQxXuuhzeGqyrWwog6%2FOFybmajoYmcI"
+							},
+							{
+								"key": "Origin",
+								"value": "https://staging.sunbirded.org"
+							},
+							{
+								"key": "Referer",
+								"value": "https://staging.sunbirded.org/workspace/content/create/textbook"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-origin"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "X-App-Id",
+								"value": "staging.sunbird.portal"
+							},
+							{
+								"key": "X-App-Version",
+								"value": "7.0.0"
+							},
+							{
+								"key": "X-Channel-Id",
+								"value": "01269878797503692810"
+							},
+							{
+								"key": "X-Device-ID",
+								"value": "0b29ae08ac043b281c4bbee3b455ab63"
+							},
+							{
+								"key": "X-Org-code",
+								"value": "01269878797503692810"
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "5b9d9698-933d-4873-8c93-69f0c8482cc7"
+							},
+							{
+								"key": "X-Session-ID",
+								"value": "1GXh9mFht_quQsnciMm3alyl3gWwR-d2"
+							},
+							{
+								"key": "X-Source",
+								"value": "web"
+							},
+							{
+								"key": "X-User-ID",
+								"value": "fca2925f-1eee-4654-9177-fece3fd6afc9"
+							},
+							{
+								"key": "X-msgid",
+								"value": "5b9d9698-933d-4873-8c93-69f0c8482cc7"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Linux\""
+							},
+							{
+								"key": "ts",
+								"value": "2024-04-10T13:20:54+05:30"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"request\":{\"type\":\"content\",\"action\":\"create\",\"subType\":\"textbook\",\"rootOrgId\":\"01269878797503692810\",\"framework\":\"tn_k-12_5\"}}"
+						},
 						"url": {
-							"raw": "https://a01fcfde-828f-4ee6-a9a4-d81ab3ae6c9d.mock.pstmn.io/sample",
+							"raw": "https://staging.sunbirded.org/api/data/v1/form/read",
 							"protocol": "https",
 							"host": [
-								"a01fcfde-828f-4ee6-a9a4-d81ab3ae6c9d",
-								"mock",
-								"pstmn",
-								"io"
-							],
-							"path": [
-								"sample"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Thu, 02 Nov 2023 10:31:20 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "439"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"1b7-v2XGTX35cNN5GgglcavY4bGeHxE\""
-						},
-						{
-							"key": "set-cookie",
-							"value": "sails.sid=s%3AAIvf5hYxdK_12vqvXje4_vAmqPJZeqzZ.jGnhH%2FGmViQdX9h9kHJTyu4S3SorL1O%2BGUH3fHJG7MA; Path=/; HttpOnly"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"args\": {\n        \"test\": \"123\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-65437a78-6a72cb977e0e7e871bd2a710\",\n        \"user-agent\": \"PostmanRuntime/7.33.0\",\n        \"accept\": \"*/*\",\n        \"postman-token\": \"66631fd1-7aeb-48af-986d-2d6d782036f5\",\n        \"accept-encoding\": \"gzip, deflate, br\"\n    },\n    \"url\": \"https://postman-echo.com/get?test=123\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Channel - Get",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
-			},
-			"response": [
-				{
-					"name": "Default",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/api/channel/v1/read/0135261634806579203",
-							"host": [
-								"{{host}}"
+								"staging",
+								"sunbirded",
+								"org"
 							],
 							"path": [
 								"api",
-								"channel",
+								"data",
 								"v1",
-								"read",
-								"0135261634806579203"
+								"form",
+								"read"
 							]
 						}
 					},
@@ -114,7 +267,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Thu, 02 Nov 2023 10:36:41 GMT"
+							"value": "Wed, 10 Apr 2024 07:51:44 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -134,43 +287,55 @@
 						},
 						{
 							"key": "X-RateLimit-Limit-hour",
-							"value": "30000"
+							"value": "1000000"
 						},
 						{
 							"key": "X-RateLimit-Remaining-hour",
-							"value": "29998"
+							"value": "999996"
 						},
 						{
-							"key": "x-powered-by",
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Powered-By",
 							"value": "Express"
 						},
 						{
-							"key": "access-control-allow-origin",
+							"key": "ETag",
+							"value": "W/\"655-6D4OC4FumySrR4ABZHzEA5924lM\""
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
 							"value": "*"
 						},
 						{
-							"key": "access-control-allow-methods",
-							"value": "GET,PUT,POST,PATCH,DELETE,OPTIONS"
-						},
-						{
-							"key": "access-control-allow-headers",
-							"value": "Content-Type, Authorization,cid, user-id, x-auth, Cache-Control, X-Requested-With, *"
-						},
-						{
-							"key": "etag",
-							"value": "W/\"1251-2W05+njVYwmrIgT+eLDCq4ywWmE\""
-						},
-						{
-							"key": "x-envoy-upstream-service-time",
-							"value": "29"
-						},
-						{
 							"key": "X-Kong-Upstream-Latency",
-							"value": "32"
+							"value": "7"
 						},
 						{
 							"key": "X-Kong-Proxy-Latency",
-							"value": "4"
+							"value": "43"
 						},
 						{
 							"key": "Via",
@@ -178,11 +343,11 @@
 						},
 						{
 							"key": "X-Proxy-Cache",
-							"value": "HIT"
+							"value": "MISS"
 						},
 						{
 							"key": "X-Proxy-Cache-Date",
-							"value": "Thu, 02 Nov 2023 10:33:23 GMT"
+							"value": "Wed, 10 Apr 2024 07:51:44 GMT"
 						},
 						{
 							"key": "Content-Encoding",
@@ -190,36 +355,9 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"id\": \"api.channel.read\",\n    \"ver\": \"1.0\",\n    \"ts\": \"2023-11-02T10:33:23.321Z\",\n    \"params\": {\n        \"resmsgid\": \"3fc21690-796b-11ee-aa52-8d96a90bc246\",\n        \"msgid\": \"8f37305d-3a21-4494-86ce-04af5b7f2eb3\",\n        \"status\": \"successful\",\n        \"err\": null,\n        \"errmsg\": null\n    },\n    \"responseCode\": \"OK\",\n    \"result\": {\n        \"channel\": {\n            \"identifier\": \"0135261634806579203\",\n            \"lastStatusChangedOn\": \"2023-06-06T06:52:28.791+0000\",\n            \"code\": \"0135261634806579203\",\n            \"frameworks\": [\n                {\n                    \"name\": \"sunbird_TPD\",\n                    \"relation\": \"hasSequenceMember\",\n                    \"identifier\": \"sunbird_TPD\",\n                    \"description\": \"Sunbird TPD framework\",\n                    \"objectType\": \"Framework\",\n                    \"status\": \"Live\",\n                    \"type\": \"TPD\",\n                    \"index\": 1\n                },\n                {\n                    \"name\": \"sunbird\",\n                    \"relation\": \"hasSequenceMember\",\n                    \"identifier\": \"sunbird\",\n                    \"description\": \"Sunbird K-12 framework\",\n                    \"objectType\": \"Framework\",\n                    \"status\": \"Live\",\n                    \"type\": \"K-12\",\n                    \"index\": 2\n                }\n            ],\n            \"consumerId\": \"7411b6bd-89f3-40ec-98d1-229dc64ce77d\",\n            \"description\": \"Default Organisation for Sunbird\",\n            \"assetAdditionalCategories\": [],\n            \"autoCreateBatch\": \"Enabled\",\n            \"languageCode\": [],\n            \"createdOn\": \"2023-06-06T06:52:28.791+0000\",\n            \"objectType\": \"Channel\",\n            \"versionKey\": \"1696490575132\",\n            \"collectionPrimaryCategories\": [\n                \"Course\"\n            ],\n            \"contentPrimaryCategories\": [\n                \"Course Assessment\",\n                \"Explanation Content\"\n            ],\n            \"name\": \"sunbird\",\n            \"primaryCategories\": [\n                {\n                    \"identifier\": \"obj-cat:asset_asset_all\",\n                    \"name\": \"Asset\",\n                    \"targetObjectType\": \"Asset\"\n                },\n                {\n                    \"identifier\": \"obj-cat:certificate-template_asset_all\",\n                    \"name\": \"Certificate Template\",\n                    \"targetObjectType\": \"Asset\"\n                },\n                {\n                    \"identifier\": \"obj-cat:course_collection_all\",\n                    \"name\": \"Course\",\n                    \"targetObjectType\": \"Collection\"\n                },\n                {\n                    \"identifier\": \"obj-cat:course-unit_collection_all\",\n                    \"name\": \"Course Unit\",\n                    \"targetObjectType\": \"Collection\"\n                },\n                {\n                    \"identifier\": \"obj-cat:etextbook_content_all\",\n                    \"name\": \"eTextbook\",\n                    \"targetObjectType\": \"Content\"\n                },\n                {\n                    \"identifier\": \"obj-cat:explanation-content_content_all\",\n                    \"name\": \"Explanation Content\",\n                    \"targetObjectType\": \"Content\"\n                }\n            ],\n            \"additionalCategories\": [\n                \"Asset\",\n                \"Certificate Template\",\n                \"Content\",\n                \"Course\",\n                \"Course Assessment\",\n                \"Course Unit\",\n                \"Explanation Content\"\n            ],\n            \"lastUpdatedOn\": \"2023-10-05T07:22:55.132+0000\",\n            \"defaultCourseFramework\": \"sunbird_TPD\",\n            \"collectionAdditionalCategories\": [\n                \"Course\"\n            ],\n            \"assetPrimaryCategories\": [\n                \"Asset\",\n                \"CertAsset\",\n                \"Certificate Template\"\n            ],\n            \"status\": \"Live\",\n            \"defaultFramework\": \"sunbird\"\n        }\n    }\n}"
+					"body": "{\n    \"id\": \"api.form.read\",\n    \"params\": {\n        \"resmsgid\": \"61fd7ec4-2dbf-498b-a6b1-7a5677e1cb81\",\n        \"msgid\": \"da29d9e8-f0c1-45f3-b15e-3101fc790f9f\",\n        \"status\": \"successful\"\n    },\n    \"responseCode\": \"OK\",\n    \"result\": {\n        \"form\": {\n            \"type\": \"content\",\n            \"subtype\": \"textbook\",\n            \"action\": \"create\",\n            \"component\": \"*\",\n            \"framework\": \"tn_k-12_5\",\n            \"data\": {\n                \"templateName\": \"defaultTemplate\",\n                \"action\": \"create\",\n                \"fields\": [\n                    {\n                        \"code\": \"name\",\n                        \"dataType\": \"text\",\n                        \"name\": \"Name\",\n                        \"label\": \"Name\",\n                        \"description\": \"Name\",\n                        \"editable\": true,\n                        \"placeholder\": \"Name\",\n                        \"inputType\": \"text\",\n                        \"required\": true,\n                        \"displayProperty\": \"Editable\",\n                        \"visible\": true,\n                        \"renderingHints\": {\n                            \"semanticColumnWidth\": \"twelve\"\n                        },\n                        \"index\": 1,\n                        \"validation\": [\n                            {\n                                \"type\": \"regex\",\n                                \"value\": \"^[a-zA-Z0-9 &]*$\",\n                                \"message\": \"Invalid Input\"\n                            },\n                            {\n                                \"type\": \"max\",\n                                \"value\": \"50\",\n                                \"message\": \"Input is Exceded\"\n                            }\n                        ]\n                    },\n                    {\n                        \"code\": \"publisher\",\n                        \"dataType\": \"text\",\n                        \"name\": \"Publisher\",\n                        \"label\": \"Publisher\",\n                        \"description\": \"Medium of instruction\",\n                        \"editable\": true,\n                        \"placeholder\": \"Publisher\",\n                        \"inputType\": \"text\",\n                        \"required\": false,\n                        \"displayProperty\": \"Editable\",\n                        \"visible\": true,\n                        \"renderingHints\": {\n                            \"semanticColumnWidth\": \"six\"\n                        },\n                        \"index\": 6,\n                        \"validation\": [\n                            {\n                                \"type\": \"regex\",\n                                \"value\": \"^[a-zA-Z0-9]*$\",\n                                \"message\": \"Invalid Input\"\n                            },\n                            {\n                                \"type\": \"max\",\n                                \"value\": \"25\",\n                                \"message\": \"Input is Exceded\"\n                            }\n                        ]\n                    },\n                    {\n                        \"code\": \"year\",\n                        \"dataType\": \"text\",\n                        \"name\": \"Year\",\n                        \"label\": \"Year\",\n                        \"description\": \"Year\",\n                        \"editable\": true,\n                        \"placeholder\": \"Year\",\n                        \"inputType\": \"select\",\n                        \"required\": false,\n                        \"displayProperty\": \"Editable\",\n                        \"visible\": true,\n                        \"renderingHints\": {\n                            \"semanticColumnWidth\": \"six\"\n                        },\n                        \"index\": 7\n                    }\n                ]\n            },\n            \"created_on\": \"2020-11-12T07:02:44.056Z\",\n            \"last_modified_on\": \"2021-09-27T11:58:50.480Z\",\n            \"rootOrgId\": \"01269878797503692810\"\n        }\n    },\n    \"ts\": \"2024-04-10T07:51:44.171Z\",\n    \"ver\": \"1.0\"\n}"
 				}
 			]
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "host",
-			"value": "https://dev.sunbirded.org",
-			"type": "string"
 		}
 	]
 }

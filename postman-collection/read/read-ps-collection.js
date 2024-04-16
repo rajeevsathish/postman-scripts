@@ -4,7 +4,7 @@ var fs = require('fs'),
 
 function readColl() {
     myCollection = new Collection(JSON.parse
-        (fs.readFileSync('data/sb-apis-mock.postman_collection.json').toString()));
+        (fs.readFileSync(__dirname + '/data/sb-apis-mock.postman_collection.json').toString()));
     
     var collJson = myCollection.toJSON();
     console.log(collJson);
