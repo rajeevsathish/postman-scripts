@@ -8,7 +8,7 @@
             "name": "Global*",
             "item": [
                 {
-                    "name": "Form 1",
+                    "name": "Form-1 - program-dashboard | csv-dataset | reportdata | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -33,7 +33,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 2",
+                    "name": "Form-2 - app | install | upgrade | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -58,7 +58,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 3",
+                    "name": "Form-3 - user | framework | update | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -83,7 +83,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 4",
+                    "name": "Form-4 - content | resource | save | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -108,7 +108,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 5",
+                    "name": "Form-5 - config | supportedurlregex | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -133,7 +133,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 6",
+                    "name": "Form-6 - contentcategory | global | menubar | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -158,7 +158,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 7",
+                    "name": "Form-7 - user | child | create | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -183,7 +183,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 8",
+                    "name": "Form-8 - content | collection | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -208,7 +208,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 9",
+                    "name": "Form-9 - config | segmentation_v2 | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -233,7 +233,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 10",
+                    "name": "Form-10 - group | supported_activities | list | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -258,7 +258,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 11",
+                    "name": "Form-11 - config | library_v4 | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -283,7 +283,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 12",
+                    "name": "Form-12 - contentcategory-test | global-test | search | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -308,7 +308,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 13",
+                    "name": "Form-13 - content | resource | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -333,7 +333,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 14",
+                    "name": "Form-14 - form | boardcontactinfo | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -358,7 +358,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 15",
+                    "name": "Form-15 - filterconfig | default | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -383,7 +383,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 16",
+                    "name": "Form-16 - user | project | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -408,7 +408,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 17",
+                    "name": "Form-17 - content | textbook | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -433,7 +433,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 18",
+                    "name": "Form-18 - forum | group | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -458,7 +458,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 19",
+                    "name": "Form-19 - contentfeedback | en | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -483,7 +483,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 20",
+                    "name": "Form-20 - config | course_v3 | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -508,7 +508,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 21",
+                    "name": "Form-21 - config | deeplink | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -533,7 +533,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 22",
+                    "name": "Form-22 - config | boardalias | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -558,7 +558,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 23",
+                    "name": "Form-23 - config | usertype | get | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -583,7 +583,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 24",
+                    "name": "Form-24 - user | framework | update | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -608,7 +608,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 25",
+                    "name": "Form-25 - config | login_v2 | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -633,7 +633,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 26",
+                    "name": "Form-26 - profileconfig_v2 | default | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -658,7 +658,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 27",
+                    "name": "Form-27 - content | resource | publish | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -683,7 +683,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 28",
+                    "name": "Form-28 - config | vendorapps | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -708,7 +708,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 29",
+                    "name": "Form-29 - user | manageduser | create | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -733,7 +733,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 30",
+                    "name": "Form-30 - config | search | filter_v3 | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -758,7 +758,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 31",
+                    "name": "Form-31 - config | discover_v2 | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -783,7 +783,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 32",
+                    "name": "Form-32 - content | resourcebundle | search | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -808,7 +808,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 33",
+                    "name": "Form-33 - config | segmentation_v2 | get | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -833,7 +833,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 34",
+                    "name": "Form-34 - dynamicform | support_v2 | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -858,7 +858,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 35",
+                    "name": "Form-35 - user | exclusion | onboarding | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -883,7 +883,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 36",
+                    "name": "Form-36 - contentcategory | global | menubar | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -908,7 +908,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 37",
+                    "name": "Form-37 - user | project | createtask | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -933,7 +933,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 38",
+                    "name": "Form-38 - content | resource | review | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -958,7 +958,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 39",
+                    "name": "Form-39 - contentcategory-test2 | global-test2 | create | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -983,7 +983,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 40",
+                    "name": "Form-40 - onboardingpopupvisibility | global | onboarding | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1008,7 +1008,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 41",
+                    "name": "Form-41 - dynamicform | contentrequest | submit | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1033,7 +1033,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 42",
+                    "name": "Form-42 - config | adminhome | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1058,7 +1058,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 43",
+                    "name": "Form-43 - config | content_v2 | filter | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1083,7 +1083,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 44",
+                    "name": "Form-44 - config | frameworkcategory | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1108,7 +1108,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 45",
+                    "name": "Form-45 - profileconfig_v2 | 28 | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1133,7 +1133,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 46",
+                    "name": "Form-46 - config | usertype_v2 | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1158,7 +1158,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 47",
+                    "name": "Form-47 - config | webview_version | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1183,7 +1183,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 48",
+                    "name": "Form-48 - filterconfig | browse_by_category_course | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1208,7 +1208,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 49",
+                    "name": "Form-49 - content | assessment | create | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1233,7 +1233,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 50",
+                    "name": "Form-50 - dynamicform | consentdeclaration_v3 | submit | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1258,7 +1258,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 51",
+                    "name": "Form-51 - user | tenantpersonainfo_v2 | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1283,7 +1283,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 52",
+                    "name": "Form-52 - content | questions | question-meta-save | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1308,7 +1308,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 53",
+                    "name": "Form-53 - category | targetedcategory | homelisting | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1333,7 +1333,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 54",
+                    "name": "Form-54 - config | frameworkcategory | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1358,7 +1358,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 55",
+                    "name": "Form-55 - config | * | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1383,7 +1383,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 56",
+                    "name": "Form-56 - newuseronboarding | global | onboarding | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1408,7 +1408,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 57",
+                    "name": "Form-57 - config | adminhome_v2 | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1433,7 +1433,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 58",
+                    "name": "Form-58 - config | notification | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1458,7 +1458,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 59",
+                    "name": "Form-59 - content | textbook | create | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1483,7 +1483,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 60",
+                    "name": "Form-60 - searchfilterconfig | global | globalsearch | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1508,7 +1508,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 61",
+                    "name": "Form-61 - config | faq | reportissue | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1533,7 +1533,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 62",
+                    "name": "Form-62 - content-test | pendingforevaluation | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1558,7 +1558,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 63",
+                    "name": "Form-63 - config | search | facet_filter | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1583,7 +1583,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 64",
+                    "name": "Form-64 - config | contentframeworkcategory | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1608,7 +1608,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 65",
+                    "name": "Form-65 - content | * | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1633,7 +1633,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 66",
+                    "name": "Form-66 - content | resource | publish | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1658,7 +1658,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 67",
+                    "name": "Form-67 - customresourcebundles | global | list | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1683,7 +1683,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 68",
+                    "name": "Form-68 - generaliseresourcebundles | global | list | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1708,7 +1708,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 69",
+                    "name": "Form-69 - config | home_v5 | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1733,7 +1733,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 70",
+                    "name": "Form-70 - schemas | search | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1758,7 +1758,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 71",
+                    "name": "Form-71 - user | selfdeclaration_v3 | submit | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1783,7 +1783,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 72",
+                    "name": "Form-72 - config | pdfplayer_v2 | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1808,7 +1808,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 73",
+                    "name": "Form-73 - contentcategory-test1 | global-test1 | search | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1833,7 +1833,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 74",
+                    "name": "Form-74 - user | externalidverification | onboarding | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1858,7 +1858,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 75",
+                    "name": "Form-75 - config | profileconfig_v2 | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1883,7 +1883,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 76",
+                    "name": "Form-76 - content | questions | question-filter-view | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1908,7 +1908,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 77",
+                    "name": "Form-77 - config | utility | get | app",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1933,7 +1933,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 78",
+                    "name": "Form-78 - batch | report_types | list | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1958,7 +1958,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 79",
+                    "name": "Form-79 - content | lessonplan | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1983,7 +1983,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 80",
+                    "name": "Form-80 - workspace | categories | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -2008,7 +2008,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 81",
+                    "name": "Form-81 - content | resourcebundle | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -2033,7 +2033,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 82",
+                    "name": "Form-82 - config | debugmode | get | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -2058,7 +2058,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 83",
+                    "name": "Form-83 - config | location | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -2083,7 +2083,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form 84",
+                    "name": "Form-84 - content | player | play | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -2110,13 +2110,13 @@
             ]
         },
         {
-            "name": "ChannelId",
+            "name": "0137541424673095687",
             "item": [
                 {
                     "name": "Framework-*",
                     "item": [
                         {
-                            "name": "Form 1",
+                            "name": "Form-1 - profileconfig_v2 | 12 | get | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2141,7 +2141,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 2",
+                            "name": "Form-2 - questionset | targetedcategory | category | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2166,7 +2166,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 3",
+                            "name": "Form-3 - content | questions | question-filter-view | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2191,7 +2191,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 4",
+                            "name": "Form-4 - questionset | editor | display | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2216,7 +2216,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 5",
+                            "name": "Form-5 - content | player | play | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2241,7 +2241,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 6",
+                            "name": "Form-6 - workspace | * | get | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2266,7 +2266,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 7",
+                            "name": "Form-7 - contentfeedback | en | get | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2291,7 +2291,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 8",
+                            "name": "Form-8 - content | all | ownership | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2316,7 +2316,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 9",
+                            "name": "Form-9 - content | resourcebundle | search | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2341,7 +2341,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 10",
+                            "name": "Form-10 - category | targetedcategory | homelisting | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2366,7 +2366,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 11",
+                            "name": "Form-11 - profileconfig_v2 | 28 | get | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2391,7 +2391,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 12",
+                            "name": "Form-12 - content | resourcebundle | search | portal",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2416,7 +2416,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 13",
+                            "name": "Form-13 - profileconfig_v2 | * | get | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2441,7 +2441,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 14",
+                            "name": "Form-14 - profileconfig_v2 | dafault | get | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2466,7 +2466,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 15",
+                            "name": "Form-15 - config | segmentation_v2 | get | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2491,7 +2491,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 16",
+                            "name": "Form-16 - workspace | categories | get | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2521,7 +2521,7 @@
                     "name": "Framework-NCF",
                     "item": [
                         {
-                            "name": "Form 1",
+                            "name": "Form-1 - content | resourcebundle | search | portal",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2546,7 +2546,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 2",
+                            "name": "Form-2 - content | questions | question-meta-save | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2571,7 +2571,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 3",
+                            "name": "Form-3 - content | lessonplan | save | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2596,7 +2596,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 4",
+                            "name": "Form-4 - content | lessonplan | resource-filters | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2621,7 +2621,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 5",
+                            "name": "Form-5 - content | textbook | create | portal",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2646,7 +2646,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 6",
+                            "name": "Form-6 - content | resource | save | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2671,7 +2671,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 7",
+                            "name": "Form-7 - content | questions | question-filter-view | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2696,7 +2696,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 8",
+                            "name": "Form-8 - content | resource | review | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2721,7 +2721,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 9",
+                            "name": "Form-9 - content | * | create | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2746,7 +2746,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 10",
+                            "name": "Form-10 - content | resource | create | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2771,7 +2771,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 11",
+                            "name": "Form-11 - user | framework | update | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",
@@ -2796,7 +2796,7 @@
                             "response": []
                         },
                         {
-                            "name": "Form 12",
+                            "name": "Form-12 - content | assessment | create | *",
                             "request": {
                                 "method": "POST",
                                 "url": "{{host}}/api/data/v1/form/create",

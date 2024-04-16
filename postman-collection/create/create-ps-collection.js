@@ -16,14 +16,14 @@ const generatePostmanCollection = async () => {
                     item: []
                 },
                 {
-                    name: "ChannelId",
+                    name: channelSpecificPayload.request.root_org,
                     item: [
                         {
                             name: 'Framework-*',
                             item: []
                         },
                         {
-                            name: 'Framework-NCF',
+                            name: 'Framework-' + NCFPayload.request.framework,
                             item: []
                         }
                     ]

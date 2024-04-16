@@ -13,9 +13,9 @@ const generatePostmanItems = (responseData) => {
                 rootOrgId: eachResponseData.root_org
             }
         };
-
+        const formName = `${eachResponseData.type} | ${eachResponseData.subtype} | ${eachResponseData.action} | ${eachResponseData.component}`;
         const item = {
-            name: `Form ${index + 1}`,
+            name: `Form-${index + 1} - ` + formName,
             request: {
                 method: "POST",
                 url: "{{host}}/api/data/v1/form/create",
