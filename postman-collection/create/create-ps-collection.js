@@ -1,6 +1,23 @@
 const fs = require('fs');
+const dotenv = require('dotenv');
 const { fetchDataFromAPI } = require('./api');
 const { generatePostmanItems } = require('./postmanItems');
+
+if (!fs.existsSync('.env')) {
+    console.log('Please create a .env file and set BASE_URL and AUTH_API_TOKEN values.');
+    console.log('Follow instructions mentioned in .env_example file');
+    return;
+}
+
+dotenv.config();
+
+const HOST_URL = process.env.BASE_URL;
+const API_AUTH_TOKEN = process.env.AUTH_API_TOKEN;
+
+if (!HOST_URL || !API_AUTH_TOKEN) {
+    console.log('Please set BASE_URL and AUTH_API_TOKEN values in the .env file.');
+    return;
+}
 
 const getPayload = (channelId, frameworkId) => {
     let payload = {

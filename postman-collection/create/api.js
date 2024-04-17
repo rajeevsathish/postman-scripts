@@ -2,7 +2,7 @@ const axios = require('axios');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const HOST_URL = process.env.BASE_URL || "https://dev.sunbirded.org/";
+const HOST_URL = process.env.BASE_URL;
 const API_AUTH_TOKEN = process.env.AUTH_API_TOKEN;
 
 const fetchDataFromAPI = async (payload) => {
