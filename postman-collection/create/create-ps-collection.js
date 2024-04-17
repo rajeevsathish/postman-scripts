@@ -98,7 +98,7 @@ const generatePostmanCollection = async () => {
             }
             await processChannels();
         }
-        /* Channel API Collection Generation - Start */
+        /* Channel API Collection Generation - End */
 
         console.log('postmanCollection ==>', postmanCollection);
         const collectionJson = JSON.stringify(postmanCollection, null, 4);
