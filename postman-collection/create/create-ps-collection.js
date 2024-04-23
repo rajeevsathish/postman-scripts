@@ -1,6 +1,7 @@
 const fs = require('fs');
 const dotenv = require('dotenv');
-const { fetchDataFromAPI } = require('./api');
+const { getPayload, fetchDataFromAPI } = require('./api');
+const { processDuplicates } = require('./helper');
 const { generatePostmanItems } = require('./postmanItems');
 
 if (!fs.existsSync('.env')) {
@@ -19,43 +20,8 @@ if (!HOST_URL || !API_AUTH_TOKEN) {
     return;
 }
 
-const getPayload = (channelId, frameworkId) => {
-    let payload = {
-        request: {},
-        fields: [
-            "type",
-            "subtype",
-            "action",
-            "component",
-            "framework",
-            "data",
-            "root_org"
-        ]
-    };
-
-    if (channelId && frameworkId) {
-        payload.request.root_org = channelId;
-        payload.request.framework = frameworkId;
-    } else if (channelId) {
-        payload.request.root_org = channelId;
-    } else {
-        payload.request.root_org = '*';
-        payload.request.framework = '*';
-    }
-
-    return payload;
-};
-
-
-const frameworkItems = (frameworkValue) => {
-    return {
-        name: 'Framework-' + frameworkValue,
-        item: []
-    }
-}
-
 const generateChannelItems = async (channelId) => {
-    let channelItems = {
+    const channelItems = {
         name: channelId,
         item: []
     };
@@ -63,41 +29,72 @@ const generateChannelItems = async (channelId) => {
     const payload = getPayload(channelId);
     const formsData = await fetchDataFromAPI(payload);
 
-    const uniqueFrameworks = new Set();
-    formsData.forEach(item => {
-        uniqueFrameworks.add(item.framework);
-    });
+    // Extract unique frameworks
+    const uniqueFrameworks = new Set(formsData.map(item => item.framework));
 
-    const allFrameworks = Array.from(uniqueFrameworks);
-    for (const framework of allFrameworks) {
-        let frameworkFormPostmanItem = frameworkItems(framework);
+    for (const framework of uniqueFrameworks) {
+        const frameworkFormPostmanItems = {
+            name: `Framework-${framework}`,
+            item: []
+        };
+
         const frameworkPayload = getPayload(channelId, framework);
-        const frameworkFormData = await fetchDataFromAPI(frameworkPayload);
-        const frameworkFormsItems = generatePostmanItems(frameworkFormData);
-        frameworkFormPostmanItem.item.push(...frameworkFormsItems);
-        channelItems.item.push(frameworkFormPostmanItem);
+        const frameworkForms = await fetchDataFromAPI(frameworkPayload);
+
+        const { uniqueForms, duplicateForms} = processDuplicates(frameworkForms);
+
+        console.log(`${channelId}-${framework} :: uniqueForms : ${uniqueForms.length}  duplicateForms: ${duplicateForms.length}\n`);
+
+        const frameworkFormsItems = generatePostmanItems(uniqueForms);
+        frameworkFormPostmanItems.item.push(...frameworkFormsItems);
+
+        if (duplicateForms.length > 0) {
+            const duplicateFormPostmanItems = {
+                name: "Duplicate",
+                item: generatePostmanItems(duplicateForms)
+            };
+            frameworkFormPostmanItems.item.push(duplicateFormPostmanItems);
+        }
+
+        channelItems.item.push(frameworkFormPostmanItems);
     }
     return channelItems;
-}
+};
+
 
 
 const generatePostmanCollection = async () => {
     try {
         const postmanCollection = {
             info: {
-                name: "Easy Install Form API Collection",
+                name: "ED Form API Collection",
                 schema: "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
             },
             item: []
         };
+
         /* Global API Collection Generation - Start */
         let globalItems = {
             name: "Global*",
             item: []
         };
+
         const globalPayload = getPayload();
-        const globalFormsData = await fetchDataFromAPI(globalPayload);
-        const globalFormsItems = generatePostmanItems(globalFormsData);
+        const globalForms = await fetchDataFromAPI(globalPayload);
+
+        const { uniqueForms, duplicateForms} = processDuplicates(globalForms);
+
+        console.log(`Global ** :: uniqueForms : ${uniqueForms.length}  duplicateForms: ${duplicateForms.length}\n`);
+
+        if (duplicateForms.length > 0) {
+            const duplicateFormPostmanItems = {
+                name: "Duplicate",
+                item: generatePostmanItems(duplicateForms)
+            };
+            globalFormsItems.item.push(duplicateFormPostmanItems);
+        }
+
+        const globalFormsItems = generatePostmanItems(uniqueForms);
         globalItems.item.push(...globalFormsItems);
         postmanCollection.item.push(globalItems);
         /* Global API Collection Generation - End */
@@ -117,7 +114,6 @@ const generatePostmanCollection = async () => {
         }
         /* Channel API Collection Generation - End */
 
-        console.log('postmanCollection ==>', postmanCollection);
         const collectionJson = JSON.stringify(postmanCollection, null, 4);
         fs.writeFileSync("collection.json", collectionJson);
 
