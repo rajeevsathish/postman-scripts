@@ -1,7 +1,85 @@
 const fs = require('fs');
+const dotenv = require('dotenv');
 const { fetchDataFromAPI } = require('./api');
 const { generatePostmanItems } = require('./postmanItems');
-const { globalPayload, channelSpecificPayload, NCFPayload } = require('./payloads');
+
+if (!fs.existsSync('.env')) {
+    console.log('Please create a .env file and set BASE_URL and AUTH_API_TOKEN values.');
+    console.log('Follow instructions mentioned in .env_example file');
+    return;
+}
+
+dotenv.config();
+
+const HOST_URL = process.env.BASE_URL;
+const API_AUTH_TOKEN = process.env.AUTH_API_TOKEN;
+
+if (!HOST_URL || !API_AUTH_TOKEN) {
+    console.log('Please set BASE_URL and AUTH_API_TOKEN values in the .env file.');
+    return;
+}
+
+const getPayload = (channelId, frameworkId) => {
+    let payload = {
+        request: {},
+        fields: [
+            "type",
+            "subtype",
+            "action",
+            "component",
+            "framework",
+            "data",
+            "root_org"
+        ]
+    };
+
+    if (channelId && frameworkId) {
+        payload.request.root_org = channelId;
+        payload.request.framework = frameworkId;
+    } else if (channelId) {
+        payload.request.root_org = channelId;
+    } else {
+        payload.request.root_org = '*';
+        payload.request.framework = '*';
+    }
+
+    return payload;
+};
+
+
+const frameworkItems = (frameworkValue) => {
+    return {
+        name: 'Framework-' + frameworkValue,
+        item: []
+    }
+}
+
+const generateChannelItems = async (channelId) => {
+    let channelItems = {
+        name: channelId,
+        item: []
+    };
+
+    const payload = getPayload(channelId);
+    const formsData = await fetchDataFromAPI(payload);
+
+    const uniqueFrameworks = new Set();
+    formsData.forEach(item => {
+        uniqueFrameworks.add(item.framework);
+    });
+
+    const allFrameworks = Array.from(uniqueFrameworks);
+    for (const framework of allFrameworks) {
+        let frameworkFormPostmanItem = frameworkItems(framework);
+        const frameworkPayload = getPayload(channelId, framework);
+        const frameworkFormData = await fetchDataFromAPI(frameworkPayload);
+        const frameworkFormsItems = generatePostmanItems(frameworkFormData);
+        frameworkFormPostmanItem.item.push(...frameworkFormsItems);
+        channelItems.item.push(frameworkFormPostmanItem);
+    }
+    return channelItems;
+}
+
 
 const generatePostmanCollection = async () => {
     try {
@@ -10,43 +88,36 @@ const generatePostmanCollection = async () => {
                 name: "Easy Install Form API Collection",
                 schema: "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
             },
-            item: [
-                {
-                    name: "Global*",
-                    item: []
-                },
-                {
-                    name: channelSpecificPayload.request.root_org,
-                    item: [
-                        {
-                            name: 'Framework-*',
-                            item: []
-                        },
-                        {
-                            name: 'Framework-' + NCFPayload.request.framework,
-                            item: []
-                        }
-                    ]
-                },
-                {
-                    name: "Duplicates",
-                    item: []
-                }
-            ]
+            item: []
         };
-
+        /* Global API Collection Generation - Start */
+        let globalItems = {
+            name: "Global*",
+            item: []
+        };
+        const globalPayload = getPayload();
         const globalFormsData = await fetchDataFromAPI(globalPayload);
         const globalFormsItems = generatePostmanItems(globalFormsData);
-        postmanCollection.item[0].item.push(...globalFormsItems);
+        globalItems.item.push(...globalFormsItems);
+        postmanCollection.item.push(globalItems);
+        /* Global API Collection Generation - End */
 
-        const channelFormResponseData = await fetchDataFromAPI(channelSpecificPayload);
-        const channelFormPostmanItems = generatePostmanItems(channelFormResponseData);
-        postmanCollection.item[1].item[0].item.push(...channelFormPostmanItems);
+        /* Channel API Collection Generation - Start */
+        if (process.env.CHANNELS) {
+            const CHANNELS = JSON.parse(process.env.CHANNELS);
+            const processChannels = async () => {
+                if (CHANNELS) {
+                    for (const channel of CHANNELS) {
+                        const generatedChannelItems = await generateChannelItems(channel);
+                        postmanCollection.item.push(generatedChannelItems);
+                    }
+                }
+            }
+            await processChannels();
+        }
+        /* Channel API Collection Generation - End */
 
-        const NCFFormResponseData = await fetchDataFromAPI(NCFPayload);
-        const NCFFormPostmanItems = generatePostmanItems(NCFFormResponseData);
-        postmanCollection.item[1].item[1].item.push(...NCFFormPostmanItems);
-
+        console.log('postmanCollection ==>', postmanCollection);
         const collectionJson = JSON.stringify(postmanCollection, null, 4);
         fs.writeFileSync("collection.json", collectionJson);
 
