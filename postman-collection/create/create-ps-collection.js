@@ -115,7 +115,7 @@ const generatePostmanCollection = async () => {
         /* Channel API Collection Generation - End */
 
         const collectionJson = JSON.stringify(postmanCollection, null, 4);
-        fs.writeFileSync("collection.json", collectionJson);
+        fs.writeFileSync("form-collection.json", collectionJson);
 
         console.log("collection.json created successfully!");
     } catch (error) {
