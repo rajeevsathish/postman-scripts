@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "coll-create": "node create/create-ps-collection.js",
+    "create-form-collection": "node create/create-ps-collection.js",
+    "create-category-def-collection": "node object-create/create-ps-collection.js",
     "coll-read": "node read/read-ps-collection.js"
   },
   "keywords": [
