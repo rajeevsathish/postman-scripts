@@ -1,0 +1,364 @@
+{
+    "formData": [
+        {
+            "type": "user",
+            "subtype": "exclusion",
+            "action": "onboarding",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "newUserOnboarding",
+            "subtype": "global",
+            "action": "onboarding",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "onboardingPopupVisibility",
+            "subtype": "global",
+            "action": "onboarding",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "user",
+            "subtype": "externalIdVerification",
+            "action": "onboarding",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "certificate",
+            "subtype": "course",
+            "action": "certificateCreate",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "contentcategory",
+            "subtype": "global",
+            "action": "menubar",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "config",
+            "subtype": "userType",
+            "action": "get",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "framework",
+            "subtype": "framework-code",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "resourcebundle",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "config",
+            "subtype": "segmentation_v2",
+            "action": "get",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "generaliseresourcebundles",
+            "subtype": "global",
+            "action": "list",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "category",
+            "subtype": "targetedCategory",
+            "action": "homeListing",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "schemas",
+            "subtype": "search",
+            "action": "get",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "batch",
+            "subtype": "report_types",
+            "action": "list",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "forum",
+            "subtype": "batch",
+            "action": "create",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "forum",
+            "subtype": "groups",
+            "action": "create",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "group",
+            "subtype": "activities",
+            "action": "list",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "framework",
+            "subtype": "framework-code",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "contentfeedback",
+            "subtype": "en",
+            "action": "get",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "player",
+            "action": "play",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "program-dashboard",
+            "subtype": "csv-dataset",
+            "action": "reportData",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "framework",
+            "subtype": "framework-code",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "config",
+            "subtype": "debugMode",
+            "action": "get",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "organization",
+            "subtype": "organization",
+            "action": "sign-in",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "user",
+            "subtype": "admin_framework",
+            "action": "create",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "user",
+            "subtype": "framework",
+            "action": "update",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "course",
+            "action": "create",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "questionset",
+            "action": "create",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "user",
+            "subtype": "child",
+            "action": "create",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "config",
+            "subtype": "userType",
+            "action": "get",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "profileConfig_v2",
+            "subtype": "default",
+            "action": "get",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "user",
+            "subtype": "personas",
+            "action": "list",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "user",
+            "subtype": "tenantPersonaInfo",
+            "action": "get",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "user",
+            "subtype": "selfDeclaration",
+            "action": "submit",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "config",
+            "subtype": "faq",
+            "action": "reportIssue",
+            "component": "portal",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "course",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "upforreview",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "allmycontent",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "alltextbooks",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "draft",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "published",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "collaboration",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "explore",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "explore-course",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "courses",
+            "action": "search",
+            "component": "*",
+            "root_org": "*",
+            "framework": "*"
+        }
+    ]
+}

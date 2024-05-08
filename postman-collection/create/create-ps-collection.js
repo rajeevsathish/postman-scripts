@@ -7,7 +7,7 @@ const { generatePostmanItems } = require('./postmanItems');
 if (!fs.existsSync('.env')) {
     console.log('Please create a .env file and set BASE_URL and AUTH_API_TOKEN values.');
     console.log('Follow instructions mentioned in .env_example file');
-    return;
+    return false;
 }
 
 dotenv.config();
@@ -17,7 +17,7 @@ const API_AUTH_TOKEN = process.env.AUTH_API_TOKEN;
 
 if (!HOST_URL || !API_AUTH_TOKEN) {
     console.log('Please set BASE_URL and AUTH_API_TOKEN values in the .env file.');
-    return;
+    return false;
 }
 
 const generateChannelItems = async (channelId) => {
@@ -85,7 +85,8 @@ const generatePostmanCollection = async () => {
         const { uniqueForms, duplicateForms} = processDuplicates(globalForms);
 
         console.log(`Global ** :: uniqueForms : ${uniqueForms.length}  duplicateForms: ${duplicateForms.length}\n`);
-
+        const globalFormsItems = generatePostmanItems(uniqueForms);
+        
         if (duplicateForms.length > 0) {
             const duplicateFormPostmanItems = {
                 name: "Duplicate",
@@ -93,8 +94,6 @@ const generatePostmanCollection = async () => {
             };
             globalFormsItems.item.push(duplicateFormPostmanItems);
         }
-
-        const globalFormsItems = generatePostmanItems(uniqueForms);
         globalItems.item.push(...globalFormsItems);
         postmanCollection.item.push(globalItems);
         /* Global API Collection Generation - End */
