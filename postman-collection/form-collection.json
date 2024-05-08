@@ -58,7 +58,32 @@
                     "response": []
                 },
                 {
-                    "name": "Form-3 - contentcategory | global | menubar | *",
+                    "name": "Form-3 - content | assessment | create | *",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{host}}/api/data/v1/form/create",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{api_key}}",
+                                "description": ""
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "description": ""
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"type\": \"content\",\n        \"subtype\": \"assessment\",\n        \"action\": \"create\",\n        \"component\": \"*\",\n        \"framework\": \"*\",\n        \"data\": {\n            \"templateName\": \"defaultTemplate\",\n            \"action\": \"create\",\n            \"fields\": [\n                {\n                    \"code\": \"name\",\n                    \"visible\": true,\n                    \"editable\": true,\n                    \"displayProperty\": \"Editable\",\n                    \"dataType\": \"text\",\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"twelve\"\n                    },\n                    \"description\": \"Name\",\n                    \"index\": 1,\n                    \"label\": \"Name\",\n                    \"required\": false,\n                    \"name\": \"Name\",\n                    \"inputType\": \"text\",\n                    \"placeholder\": \"Name\"\n                },\n                {\n                    \"code\": \"maxAttempts\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Max no of attempts\",\n                    \"label\": \"Max no of attempts\",\n                    \"description\": \"Max no of attempts\",\n                    \"editable\": true,\n                    \"placeholder\": \"Max no of attempts\",\n                    \"inputType\": \"number\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 6\n                }\n            ]\n        },\n        \"rootOrgId\": \"*\"\n    }\n}"
+                        },
+                        "description": "Generated from Node.js script"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Form-4 - contentcategory | global | menubar | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -83,7 +108,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-4 - user | child | create | portal",
+                    "name": "Form-5 - user | child | create | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -108,7 +133,32 @@
                     "response": []
                 },
                 {
-                    "name": "Form-5 - config | segmentation_v2 | get | *",
+                    "name": "Form-6 - content | collection | create | *",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{host}}/api/data/v1/form/create",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{api_key}}",
+                                "description": ""
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "description": ""
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"type\": \"content\",\n        \"subtype\": \"collection\",\n        \"action\": \"create\",\n        \"component\": \"*\",\n        \"framework\": \"*\",\n        \"data\": {\n            \"templateName\": \"defaultTemplate\",\n            \"action\": \"create\",\n            \"fields\": [\n                {\n                    \"code\": \"name\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Name\",\n                    \"label\": \"Name\",\n                    \"description\": \"Name\",\n                    \"editable\": true,\n                    \"placeholder\": \"Name\",\n                    \"inputType\": \"text\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"twelve\"\n                    },\n                    \"index\": 1\n                },\n                {\n                    \"code\": \"description\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Description\",\n                    \"label\": \"Description\",\n                    \"description\": \"description\",\n                    \"placeholder\": \"Description\",\n                    \"editable\": true,\n                    \"inputType\": \"text\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"twelve\"\n                    },\n                    \"index\": 2\n                },\n                {\n                    \"code\": \"primaryCategory\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Collection Type\",\n                    \"label\": \"Collection Type\",\n                    \"description\": \"Collection Type\",\n                    \"placeholder\": \"Select one\",\n                    \"editable\": true,\n                    \"inputType\": \"select\",\n                    \"required\": true,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"twelve\"\n                    },\n                    \"index\": 3\n                }\n            ]\n        },\n        \"rootOrgId\": \"*\"\n    }\n}"
+                        },
+                        "description": "Generated from Node.js script"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Form-7 - config | segmentation_v2 | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -133,7 +183,32 @@
                     "response": []
                 },
                 {
-                    "name": "Form-6 - user | tenantpersonainfo | get | portal",
+                    "name": "Form-8 - content | resource | create | *",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{host}}/api/data/v1/form/create",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{api_key}}",
+                                "description": ""
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "description": ""
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"type\": \"content\",\n        \"subtype\": \"resource\",\n        \"action\": \"create\",\n        \"component\": \"*\",\n        \"framework\": \"*\",\n        \"data\": {\n            \"templateName\": \"defaultTemplate\",\n            \"action\": \"create\",\n            \"fields\": [\n                {\n                    \"code\": \"name\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Name\",\n                    \"label\": \"Name\",\n                    \"description\": \"Name\",\n                    \"editable\": true,\n                    \"placeholder\": \"Name\",\n                    \"inputType\": \"text\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"twelve\"\n                    },\n                    \"index\": 1\n                },\n                {\n                    \"code\": \"board\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Board\",\n                    \"label\": \"Board\",\n                    \"description\": \"Education Board (Like MP Board, NCERT, etc)\",\n                    \"editable\": true,\n                    \"placeholder\": \"Board\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 2,\n                    \"depends\": [\n                        \"gradeLevel\"\n                    ]\n                },\n                {\n                    \"code\": \"gradeLevel\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Grade\",\n                    \"label\": \"Grade\",\n                    \"description\": \"Grade\",\n                    \"editable\": true,\n                    \"placeholder\": \"Grade\",\n                    \"inputType\": \"multiSelect\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 3,\n                    \"depends\": [\n                        \"subject\"\n                    ]\n                },\n                {\n                    \"code\": \"subject\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Subject\",\n                    \"label\": \"Subject\",\n                    \"description\": \"Subject of the Content to use to teach\",\n                    \"editable\": true,\n                    \"placeholder\": \"Grade\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 4\n                },\n                {\n                    \"code\": \"medium\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Medium\",\n                    \"label\": \"Medium\",\n                    \"description\": \"Medium of instruction\",\n                    \"editable\": true,\n                    \"placeholder\": \"Medium\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 5\n                },\n                {\n                    \"code\": \"concept\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Concept\",\n                    \"label\": \"Concepts\",\n                    \"description\": \"Concept\",\n                    \"editable\": true,\n                    \"placeholder\": \"Concept\",\n                    \"inputType\": \"Concept\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 6\n                },\n                {\n                    \"code\": \"resourceType\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Resource Type\",\n                    \"label\": \"Resource Type\",\n                    \"description\": \"Resourcetype\",\n                    \"editable\": true,\n                    \"placeholder\": \"Resource Type\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 7,\n                    \"range\": [\n                        {\n                            \"key\": \"Teach\",\n                            \"name\": \"Teach\"\n                        },\n                        {\n                            \"key\": \"Practice\",\n                            \"name\": \"Practice\"\n                        },\n                        {\n                            \"key\": \"Learn\",\n                            \"name\": \"Learn\"\n                        },\n                        {\n                            \"key\": \"Test\",\n                            \"name\": \"Test\"\n                        },\n                        {\n                            \"key\": \"Play\",\n                            \"name\": \"Play\"\n                        },\n                        {\n                            \"key\": \"Read\",\n                            \"name\": \"Read\"\n                        },\n                        {\n                            \"key\": \"Experiment\",\n                            \"name\": \"Experiment\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"rootOrgId\": \"*\"\n    }\n}"
+                        },
+                        "description": "Generated from Node.js script"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Form-9 - user | tenantpersonainfo | get | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -158,7 +233,32 @@
                     "response": []
                 },
                 {
-                    "name": "Form-7 - forum | group | create | *",
+                    "name": "Form-10 - content | textbook | create | *",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{host}}/api/data/v1/form/create",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{api_key}}",
+                                "description": ""
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "description": ""
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"type\": \"content\",\n        \"subtype\": \"textbook\",\n        \"action\": \"create\",\n        \"component\": \"*\",\n        \"framework\": \"*\",\n        \"data\": {\n            \"templateName\": \"defaultTemplate\",\n            \"action\": \"create\",\n            \"fields\": [\n                {\n                    \"code\": \"name\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Name\",\n                    \"label\": \"Name\",\n                    \"description\": \"Name\",\n                    \"editable\": true,\n                    \"placeholder\": \"Name\",\n                    \"inputType\": \"text\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"twelve\"\n                    },\n                    \"index\": 1,\n                    \"validation\": [\n                        {\n                            \"type\": \"regex\",\n                            \"value\": \"^[a-zA-Z0-9 &]*$\",\n                            \"message\": \"Invalid Input\"\n                        },\n                        {\n                            \"type\": \"max\",\n                            \"value\": \"80\",\n                            \"message\": \"Input is Exceded\"\n                        }\n                    ]\n                },\n                {\n                    \"code\": \"board\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Board\",\n                    \"label\": \"Board\",\n                    \"description\": \"Education Board (Like MP Board, NCERT, etc)\",\n                    \"editable\": true,\n                    \"placeholder\": \"Board\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 2,\n                    \"depends\": [\n                        \"gradeLevel\"\n                    ]\n                },\n                {\n                    \"code\": \"gradeLevel\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Grade\",\n                    \"label\": \"Grade\",\n                    \"description\": \"Grade\",\n                    \"editable\": true,\n                    \"placeholder\": \"Grade\",\n                    \"inputType\": \"multiSelect\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 3,\n                    \"depends\": [\n                        \"subject\"\n                    ]\n                },\n                {\n                    \"code\": \"subject\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Subject\",\n                    \"label\": \"Subject\",\n                    \"description\": \"Subject of the Content to use to teach\",\n                    \"editable\": true,\n                    \"placeholder\": \"Grade\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 4\n                },\n                {\n                    \"code\": \"medium\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Medium\",\n                    \"label\": \"Medium\",\n                    \"description\": \"Medium of instruction\",\n                    \"editable\": true,\n                    \"placeholder\": \"Medium\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 5\n                },\n                {\n                    \"code\": \"publisher\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Publisher\",\n                    \"label\": \"Publisher\",\n                    \"description\": \"Medium of instruction\",\n                    \"editable\": true,\n                    \"placeholder\": \"Publisher\",\n                    \"inputType\": \"text\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 6,\n                    \"validation\": [\n                        {\n                            \"type\": \"regex\",\n                            \"value\": \"^[a-zA-Z0-9]*$\",\n                            \"message\": \"Invalid Input\"\n                        },\n                        {\n                            \"type\": \"max\",\n                            \"value\": \"25\",\n                            \"message\": \"Input is Exceded\"\n                        }\n                    ]\n                },\n                {\n                    \"code\": \"year\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Year\",\n                    \"label\": \"Year\",\n                    \"description\": \"Year\",\n                    \"editable\": true,\n                    \"placeholder\": \"Year\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 7\n                }\n            ]\n        },\n        \"rootOrgId\": \"*\"\n    }\n}"
+                        },
+                        "description": "Generated from Node.js script"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Form-11 - forum | group | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -183,7 +283,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-8 - contentfeedback | en | get | *",
+                    "name": "Form-12 - contentfeedback | en | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -208,7 +308,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-9 - content | collaboration | search | *",
+                    "name": "Form-13 - content | collaboration | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -233,7 +333,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-10 - organization | organization | sign-in | *",
+                    "name": "Form-14 - organization | organization | sign-in | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -258,7 +358,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-11 - user | selfdeclaration | submit | portal",
+                    "name": "Form-15 - user | selfdeclaration | submit | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -283,7 +383,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-12 - config | usertype | get | portal",
+                    "name": "Form-16 - config | usertype | get | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -308,7 +408,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-13 - user | framework | update | *",
+                    "name": "Form-17 - user | framework | update | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -333,7 +433,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-14 - profileconfig_v2 | default | get | *",
+                    "name": "Form-18 - profileconfig_v2 | default | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -358,7 +458,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-15 - content | resource | publish | *",
+                    "name": "Form-19 - content | resource | publish | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -383,7 +483,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-16 - content | upforreview | search | *",
+                    "name": "Form-20 - content | upforreview | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -408,7 +508,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-17 - content | explore-course | filter | *",
+                    "name": "Form-21 - content | explore-course | filter | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -433,7 +533,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-18 - content | draft | search | *",
+                    "name": "Form-22 - content | draft | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -458,7 +558,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-19 - user | exclusion | onboarding | portal",
+                    "name": "Form-23 - user | exclusion | onboarding | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -483,7 +583,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-20 - content | allmycontent | search | *",
+                    "name": "Form-24 - content | allmycontent | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -508,7 +608,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-21 - certificate | course | certificatecreate | portal",
+                    "name": "Form-25 - certificate | course | certificatecreate | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -533,7 +633,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-22 - user | admin_framework | create | *",
+                    "name": "Form-26 - user | admin_framework | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -558,7 +658,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-23 - content | resource | requestforchanges | *",
+                    "name": "Form-27 - content | resource | requestforchanges | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -583,7 +683,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-24 - category | targetedcategory | homelisting | *",
+                    "name": "Form-28 - category | targetedcategory | homelisting | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -608,7 +708,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-25 - user | personas | list | portal",
+                    "name": "Form-29 - user | personas | list | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -633,7 +733,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-26 - newuseronboarding | global | onboarding | portal",
+                    "name": "Form-30 - newuseronboarding | global | onboarding | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -658,7 +758,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-27 - content | course | create | *",
+                    "name": "Form-31 - content | course | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -683,7 +783,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-28 - config | faq | reportissue | portal",
+                    "name": "Form-32 - config | faq | reportissue | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -708,7 +808,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-29 - group | activities | list | portal",
+                    "name": "Form-33 - group | activities | list | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -733,7 +833,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-30 - content | published | search | *",
+                    "name": "Form-34 - content | published | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -758,7 +858,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-31 - questionset | editor | display | *",
+                    "name": "Form-35 - questionset | editor | display | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -783,7 +883,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-32 - framework | framework-code | search | *",
+                    "name": "Form-36 - framework | framework-code | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -808,7 +908,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-33 - content | all | ownership | *",
+                    "name": "Form-37 - content | all | ownership | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -833,7 +933,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-34 - generaliseresourcebundles | global | list | portal",
+                    "name": "Form-38 - generaliseresourcebundles | global | list | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -858,7 +958,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-35 - schemas | search | get | *",
+                    "name": "Form-39 - schemas | search | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -883,7 +983,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-36 - forum | batch | create | *",
+                    "name": "Form-40 - forum | batch | create | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -908,7 +1008,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-37 - user | externalidverification | onboarding | *",
+                    "name": "Form-41 - user | externalidverification | onboarding | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -933,7 +1033,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-38 - content | alltextbooks | search | *",
+                    "name": "Form-42 - content | alltextbooks | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -958,7 +1058,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-39 - content | course | search | *",
+                    "name": "Form-43 - content | course | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -983,7 +1083,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-40 - batch | report_types | list | *",
+                    "name": "Form-44 - batch | report_types | list | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1008,7 +1108,32 @@
                     "response": []
                 },
                 {
-                    "name": "Form-41 - workspace | categories | get | *",
+                    "name": "Form-45 - content | lessonplan | create | *",
+                    "request": {
+                        "method": "POST",
+                        "url": "{{host}}/api/data/v1/form/create",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{api_key}}",
+                                "description": ""
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "description": ""
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"type\": \"content\",\n        \"subtype\": \"lessonplan\",\n        \"action\": \"create\",\n        \"component\": \"*\",\n        \"framework\": \"*\",\n        \"data\": {\n            \"templateName\": \"defaultTemplate\",\n            \"action\": \"create\",\n            \"fields\": [\n                {\n                    \"code\": \"name\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Name\",\n                    \"label\": \"Name\",\n                    \"description\": \"Name\",\n                    \"editable\": true,\n                    \"placeholder\": \"Name\",\n                    \"inputType\": \"text\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"twelve\"\n                    },\n                    \"index\": 1\n                },\n                {\n                    \"code\": \"board\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Board\",\n                    \"label\": \"Board\",\n                    \"description\": \"Education Board (Like MP Board, NCERT, etc)\",\n                    \"editable\": true,\n                    \"placeholder\": \"Board\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 2,\n                    \"depends\": [\n                        \"gradeLevel\"\n                    ]\n                },\n                {\n                    \"code\": \"gradeLevel\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Grade\",\n                    \"label\": \"Grade\",\n                    \"description\": \"Grade\",\n                    \"editable\": true,\n                    \"placeholder\": \"Grade\",\n                    \"inputType\": \"multiSelect\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 3,\n                    \"depends\": [\n                        \"subject\"\n                    ]\n                },\n                {\n                    \"code\": \"subject\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Subject\",\n                    \"label\": \"Subject\",\n                    \"description\": \"Subject of the Content to use to teach\",\n                    \"editable\": true,\n                    \"placeholder\": \"Grade\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 4\n                },\n                {\n                    \"code\": \"medium\",\n                    \"dataType\": \"text\",\n                    \"name\": \"Medium\",\n                    \"label\": \"Medium\",\n                    \"description\": \"Medium of instruction\",\n                    \"editable\": true,\n                    \"placeholder\": \"Medium\",\n                    \"inputType\": \"select\",\n                    \"required\": false,\n                    \"displayProperty\": \"Editable\",\n                    \"visible\": true,\n                    \"renderingHints\": {\n                        \"semanticColumnWidth\": \"six\"\n                    },\n                    \"index\": 5\n                }\n            ]\n        },\n        \"rootOrgId\": \"*\"\n    }\n}"
+                        },
+                        "description": "Generated from Node.js script"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Form-46 - workspace | categories | get | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1033,7 +1158,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-42 - content | resourcebundle | search | *",
+                    "name": "Form-47 - content | resourcebundle | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1058,7 +1183,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-43 - config | debugmode | get | portal",
+                    "name": "Form-48 - config | debugmode | get | portal",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1083,7 +1208,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-44 - content | explore | search | *",
+                    "name": "Form-49 - content | explore | search | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",
@@ -1108,7 +1233,7 @@
                     "response": []
                 },
                 {
-                    "name": "Form-45 - content | player | play | *",
+                    "name": "Form-50 - content | player | play | *",
                     "request": {
                         "method": "POST",
                         "url": "{{host}}/api/data/v1/form/create",

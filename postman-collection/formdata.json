@@ -375,6 +375,46 @@
             "component": "*",
             "framework": "*",
             "root_org": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "textbook",
+            "action": "create",
+            "component": "*",
+            "framework": "*",
+            "root_org": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "assessment",
+            "action": "create",
+            "component": "*",
+            "framework": "*",
+            "root_org": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "lessonplan",
+            "action": "create",
+            "component": "*",
+            "framework": "*",
+            "root_org": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "collection",
+            "action": "create",
+            "component": "*",
+            "framework": "*",
+            "root_org": "*"
+        },
+        {
+            "type": "content",
+            "subtype": "resource",
+            "action": "create",
+            "component": "*",
+            "framework": "*",
+            "root_org": "*"
         }
     ]
 }
